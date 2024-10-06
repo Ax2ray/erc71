@@ -8,7 +8,7 @@ async function main() {
     const contractFactory = await hre.ethers.getContractFactory("Axerc71");
     const ABI = JSON.parse(contractFactory.interface.formatJson());
     const contract = new hre.web3.eth.Contract(ABI, replace_contractAddress);
-    const replace_functionArgs = "0x38F09b7c692F8f428E5d93878a3d0Ee1FF9F00a5"; // Recipient address
+    const replace_functionArgs = "wallet address"; // Recipient address
     console.log("Minting 1 token...");
     try {
         const transaction = await contract.methods.safeMint(replace_functionArgs).send({ from });
